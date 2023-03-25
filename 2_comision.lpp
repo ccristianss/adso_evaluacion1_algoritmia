@@ -1,0 +1,20 @@
+/*
+2. Un vendedor recibe un sueldo base más un 10% extra por comisión en sus ventas,
+el vendedor desea saber cuánto dinero obtendrá por concepto de comisiones por las tres ventas que realiza en el mes
+y el total que recibirá en el mes tomando en cuenta su sueldo base y comisiones.
+*/
+Entero sueldobase, venta1, venta2, venta3
+Real comisionventa, dinerocomision, dinerototal
+Inicio
+	comisionventa <- 0.1
+	escriba "Ingrese su salario Base"
+	Llamar Nueva_linea
+	lea sueldobase
+	Llamar Nueva_linea
+	escriba "Ingrese el valor de las 3 ventas realizadas en el mes: "
+	Llamar Nueva_linea
+	lea venta1, venta2, venta3
+	dinerocomision<-(comisionventa*(venta1+venta2+venta3))
+	dinerototal<- (dinerocomision+sueldobase)
+	Escriba "Usted recibira por concepto de comisiones de sus ventas: ", dinerocomision, "$ y teniendo en cuenta su sueldo base recibira un total: ", dinerototal, "$"
+Fin

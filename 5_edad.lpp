@@ -1,0 +1,12 @@
+/*
+5. Realizar un algoritmo que calcule a edad de una persona
+*/
+Entero anio
+Inicio
+	escriba "Ingrese el Año de nacimiento:"
+	Llamar Nueva_linea
+	lea anio
+	Llamar Nueva_linea
+	escriba "Tienes ", (2023-anio), " Años."
+	Llamar Nueva_linea
+Fin

@@ -1,0 +1,15 @@
+/*
+1. Suponga que un individuo desea invertir su capital en un banco
+ y desea saber cuánto dinero ganará después de un mes si el banco 
+ paga a razón de 2% mensual.*/
+Entero inversion
+Real interesmes
+real ganancia
+Inicio
+	interesmes <- 0.02
+	escriba "Ingrese el valor a invertir"
+	Llamar Nueva_linea
+	lea inversion
+	ganancia<-(inversion*(1+interesmes))
+	Escriba "Usted ganará al cabo de un mes ", ganancia
+Fin

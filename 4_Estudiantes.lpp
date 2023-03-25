@@ -1,0 +1,16 @@
+/*
+4. Hoy profesor desea saber qué porcentaje de hombres y mujeres hay en un grupo de estudiantes.
+*/
+Entero numeroHombres, NumeroMujeres, totalestudiantes
+Inicio
+	escriba "Ingrese el numero de estudiantes Mujeres:"
+	Llamar Nueva_linea
+	lea NumeroMujeres
+	Llamar Nueva_linea
+	escriba "Ingrese el numero de estudiantes Hombres:"
+	Llamar Nueva_linea
+	lea numeroHombres
+	Llamar Nueva_linea
+	totalestudiantes<-(NumeroMujeres+numeroHombres)
+	escriba "En el salon hay ", totalestudiantes, " estudiantes de los cuales el ", (NumeroMujeres/totalestudiantes*100), "% son Mujeres, y ", (numeroHombres/totalestudiantes*100),"% son hombres."
+Fin
