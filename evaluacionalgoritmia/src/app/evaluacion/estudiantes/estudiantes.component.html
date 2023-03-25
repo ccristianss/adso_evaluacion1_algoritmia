@@ -1,0 +1,37 @@
+<p>
+  4. Hoy profesor desea saber qué porcentaje de hombres y mujeres hay en un
+  grupo de estudiantes.
+</p>
+<div class="form-floating">
+  <br />
+  <p class="">Ingrese la cantidad de Mujeres en el Salón</p>
+  <input
+    [formControl]="em"
+    type="number"
+    class="form-control"
+    placeholder="Mujeres"
+    id="em"
+    min="0"
+  />
+  <label for="em"> </label>
+</div>
+<div class="form-floating">
+  <br />
+  <p class="">Ingrese la cantidad de Hombres en el Salón</p>
+  <input
+    [formControl]="eh"
+    type="number"
+    class="form-control"
+    placeholder="Mujeres"
+    id="eh"
+    min="0"
+  />
+  <label for="eh"> </label>
+</div>
+<br />
+<div *ngIf="em.value && eh.value" class="form-floating">
+  <br />
+  En el salon hay {{ em.value + eh.value }} estudiantes de los cuales el
+  {{ (em.value / (em.value + eh.value)) * 100 }}% son Mujeres, y
+  {{ (eh.value / (em.value + eh.value)) * 100 }}% son hombres.
+</div>

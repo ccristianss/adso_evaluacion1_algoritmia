@@ -1,0 +1,50 @@
+<p>
+  2. Un vendedor recibe un sueldo base más un 10% extra por comisión en sus
+  ventas, el vendedor desea saber cuánto dinero obtendrá por concepto de
+  comisiones por las tres ventas que realiza en el mes y el total que recibirá
+  en el mes tomando en cuenta su sueldo base y comisiones.
+</p>
+<br />
+<div class="form-floating">
+  <p class="">Ingrese su Salario Base</p>
+  <br />
+  <input
+    [formControl]="salario"
+    type="number"
+    class="form-control"
+    placeholder="Salario"
+    id="salario"
+  />
+  <label for="salario"> </label>
+</div>
+<br />
+<div class="form-floating" *ngIf="salario.value">
+  <p class="">Ingrese las ventas realizadas</p>
+  <br />
+  <input
+    [formControl]="venta"
+    type="number"
+    class="form-control"
+    placeholder="venta"
+    id="venta"
+  />
+  <label for="venta"> </label>
+  <button *ngIf="venta.value" (click)="agregarventa()">AÑADIR VENTA</button>
+</div>
+<div *ngIf="ventas.length">
+  <br />
+  <button (click)="borrarVentas()">Borrar Ventas</button>
+  <br />
+  <p *ngFor="let v of ventas">{{ v }}</p>
+  <br />
+  <p>Total Ventas: {{ totalventa }}$</p>
+  <p>Comision del 10% : {{ totalventa * comision }}$</p>
+</div>
+<div class="form-floating">
+  <br />
+  <p>
+    Usted recibira por concepto de comisiones de sus ventas:
+    {{ totalventa * comision }}$ y teniendo en cuenta su sueldo base recibira un
+    total: {{ totalventa * comision + salario.value }}$
+  </p>
+</div>

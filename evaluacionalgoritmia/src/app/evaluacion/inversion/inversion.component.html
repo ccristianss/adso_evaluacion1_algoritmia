@@ -1,0 +1,26 @@
+<p>
+  1. Suponga que un individuo desea invertir su capital en un banco y desea
+  saber cuánto dinero ganará después de un mes si el banco paga a razón de 2%
+  mensual.
+</p>
+
+<br />
+<div class="form-floating">
+  <p class="">Ingrese en valor que desea invertir en ADSOCAPITAL BANK</p>
+  <br>
+  <input
+    [formControl]="inv"
+    type="number"
+    class="form-control"
+    placeholder="Monto a invertir"
+    id="inv"
+  />
+  <label for="inv"> </label>
+</div>
+<br />
+<div class="form-floating">
+  <br />
+  <p [hidden]="inv.value.empty">
+    Usted ganará al cabo de un mes: {{ inv.value * (1+interes) }}$
+  </p>
+</div>
